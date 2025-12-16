@@ -1,0 +1,71 @@
+
+    :root{
+      --bg-1:#061226; --bg-2:#07142a; --glass: rgba(255,255,255,0.04);
+      --card:#0f1724; --muted:#9aa7b9; --accent1:#6c5ce7; --accent2:#06b6d4; --success:#16a34a;
+      --radius:14px; --shadow: 0 10px 40px rgba(2,6,23,0.7);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#e8f0fb}
+    .wrap{max-width:1100px;margin:36px auto;padding:20px}
+
+    /* Layout */
+    .layout{display:grid;grid-template-columns:420px 1fr;gap:24px;align-items:start}
+    @media (max-width:980px){.layout{grid-template-columns:1fr}}
+
+    /* LEFT: Product Card */
+    .card-left{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:white}
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:2px 0 0;color:var(--muted);font-size:13px}
+
+    .info{margin-top:18px;color:var(--muted);font-size:13px;line-height:1.45}
+    .legend{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+    .chip{padding:8px;border-radius:10px;background:rgba(255,255,255,0.02);font-size:13px}
+
+    .left-actions{margin-top:16px;display:flex;gap:10px}
+    .link-btn{padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:var(--muted);cursor:pointer}
+
+    /* RIGHT: Onboarding + Summary */
+    .card-right{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)}
+    .header{display:flex;justify-content:space-between;align-items:center}
+    .header h2{margin:0}
+    .header .muted{color:var(--muted);font-size:13px}
+
+    /* Progress A-B-C-D */
+    .progress{display:flex;gap:8px;margin-top:18px}
+    .step-pill{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;text-align:center;font-weight:600;font-size:13px}
+    .step-pill.active{background:linear-gradient(90deg, rgba(108,92,231,0.12), rgba(6,182,212,0.06));box-shadow:0 8px 24px rgba(12,18,40,0.5)}
+
+    form{margin-top:18px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,select,textarea{width:100%;padding:10px;border-radius:10px;border:none;background:var(--glass);color:inherit;font-size:14px}
+    textarea{min-height:96px;resize:vertical}
+
+    .row{display:flex;gap:12px;align-items:center}
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+    button{padding:10px 14px;border-radius:10px;border:none;background:var(--accent1);color:white;font-weight:700;cursor:pointer}
+    button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted)}
+
+    /* Summary / dashboard */
+    .stats{display:flex;gap:12px;margin-top:16px}
+    .stat{flex:1;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));}
+    .stat .num{font-size:18px;font-weight:800}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.03);font-size:13px}
+
+    /* Result Box */
+    .result{margin-top:16px;padding:14px;border-radius:12px;background:linear-gradient(90deg, rgba(108,92,231,0.06), rgba(6,182,212,0.04));}
+    .eligible{color:var(--success);font-weight:800}
+
+    /* Microcopy */
+    .note{font-size:12px;color:var(--muted)}
+
+    /* eligible page */
+    .page{display:none}
+    .page.active{display:block}
+
+    /* small responsive tweaks */
+    @media (max-width:980px){.grid{grid-template-columns:1fr}.stats{flex-direction:column}}
+  
